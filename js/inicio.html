@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica NutriVida - asesoría nutricional personalizada">
+    <title>Inicio</title>
+</head>
+<body>
+    <header class = "site-header">
+        <div class="container">
+
+            <a class="logo" href="inicio.html">
+                <img src="img/logo.svg" alt="Logo NutriVida">
+                <span>Clínica NutriVida
+                    <small>Salud Integral</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"></button>
+
+            <nav aria-label="Navegación principal">
+                <ul class="nav-links " id="navLinks">
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Servicios</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="lista.html">Mi lista</a></li>
+                    <li><a class="btn btn-primary" href="login.html">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <span class="badge">Nutrición personalizada</span>
+                    <h1>Tu bienestar comienza con una mejor relación con la alimentación.</h1>
+                    <p>En Clínica NutriVida acompañamos tus objetivos con evaluaciones, controles y planes nutricionales adaptados a tus necesidades.</p>
+                    <div class="actions">
+                        <a class="btn btn-primary" href="catalogo.html">Ver servicios</a>
+                        <a class="btn btn-outline" href="registro.html">Crear cuenta</a>
+                    </div>
+                </div>
+                <img src="img/hero.svg" alt="Alimentos saludables">
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Servicios destacados</h2>
+                    <p>Conoce algunas alternativas de atención.</p>
+                </div>
+                <div id="listaDestacados" class="grid-4"></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container grid-2">
+                <div class="info-box">
+                    <span class="badge">NutriVida</span>
+                    <h2>Atención centrada en ti</h2>
+                    <p>Contamos con profesionales orientados a distintas necesidades: 
+                        control de peso, nutrición deportiva, alimentación vegetariana o vegana y nutrición pediátrica.</p>
+                    <a class="btn btn-primary" href="nosotros.html">Conócenos</a>
+                </div>
+                <div class="info-box">
+                    <h2>¿Quieres saber más?</h2>
+                    <p>Revisa nuestros contenidos sobre alimentación y evaluaciones nutricionales.</p>
+                    <a class="btn btn-outline" href="blog.html">Ir al Blog</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Video informativo</h2>
+                    <p>Elemento multimedia requerido por la pauta.</p>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/5zXQZ5k7F3Y" title="Video informativo de nutrición" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <div id="toast" class="toast"></div>
+
+        <script>document.addEventListener("DOMContentLoaded",()=>{cargarProductos();const c=document.getElementById("listaDestacados");productos.slice(0,4).forEach(p=>c.innerHTML+=`
+            <article class="card">
+                <img class="card-img" src="${p.imagen}" alt="${p.nombre}">
+                <div class="card-body">
+                    <h3>${p.nombre}</h3>
+                    <p class="muted">${p.descripcion}</p
+                    <p class="price">${dinero(p.precio)}</p>
+                    <button class="btn btn-primary" onclick="verDetalle('${p.id}')">Ver detalle</button>
+                </div>
+            </article>`)});
+        </script>
+    </main>
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <strong>Clínica NutriVida</strong>
+                <p class="muted">Asesoría nutricional personalizada para tu bienestar integral.</p>
+            </div>
+            <div>
+                <strong>Contacto</strong>
+                <p class="muted">
+                    Av. Vitacura 2900, Las Condes
+                    <br>
+                    +56 9 1234 5678
+                    <br>
+                    contacto@nutrivida.cl
+                </p>
+            </div>
+            <div>
+                <strong>Horario</strong>
+                <p class="muted">
+                    Lun a Vie: 09:00 - 18:00
+                    <br>
+                    Sáb: 09:00 - 14:00
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">Copyright © Clínica NutriVida.</div>
+    </footer>
+<script src="js/app.js"></script>
+</body>
+</html>
