@@ -1,23 +1,23 @@
 /*Datos*/
 let productos = [
-  {id:"CN001",tipo:"Consulta",nombre:"Primera consulta nutricional",duracion:"50 min",modalidad:"Presencial",precio:35000,descripcion:"Evaluación inicial: anamnesis, antropometría completa y diseño del primer plan alimenticio.",imagen:"img/consulta.svg"},
-  {id:"CN002",tipo:"Consulta",nombre:"Control nutricional (seguimiento)",duracion:"30 min",modalidad:"Presencial",precio:25000,descripcion:"Seguimiento mensual: medición de indicadores y ajuste del plan vigente.",imagen:"img/seguimiento.svg"},
-  {id:"CN003",tipo:"Consulta",nombre:"Control nutricional quincenal",duracion:"30 min",modalidad:"Presencial",precio:22000,descripcion:"Seguimiento intensivo cada 15 días. Recomendado en los primeros 2 meses.",imagen:"img/quincenal.svg"},
-  {id:"CN004",tipo:"Consulta",nombre:"Teleconsulta nutricional",duracion:"30 min",modalidad:"Online (video)",precio:20000,descripcion:"Consulta de seguimiento vía videollamada. Requiere contar con consulta presencial previa.",imagen:"img/teleconsulta.svg"},
-  {id:"CN005",tipo:"Consulta",nombre:"Consulta de urgencia / reagendada",duracion:"30 min",modalidad:"Presencial",precio:28000,descripcion:"Para pacientes que requieren atención fuera de su control habitual.",imagen:"img/urgencia.svg"},
-  {id:"PL001",tipo:"Plan especializado",nombre:"Plan pérdida de peso (1 mes)",duracion:"—",modalidad:"Presencial",precio:65000,descripcion:"Incluye primera consulta + 1 control quincenal + plan alimenticio personalizado + seguimiento por WhatsApp.",imagen:"img/peso.svg"},
-  {id:"PL002",tipo:"Plan especializado",nombre:"Plan pérdida de peso (3 meses)",duracion:"—",modalidad:"Presencial",precio:170000,descripcion:"Incluye primera consulta + 5 controles + 3 planes mensuales + seguimiento continuo.",imagen:"img/peso3.svg"},
-  {id:"PL003",tipo:"Plan especializado",nombre:"Plan nutrición deportiva (1 mes)",duracion:"—",modalidad:"Presencial",precio:70000,descripcion:"Para deportistas y personas con actividad física frecuente. Cálculo de requerimientos energéticos y proteicos.",imagen:"img/deportiva.svg"},
-  {id:"PL004",tipo:"Plan especializado",nombre:"Plan control diabetes / hipertensión",duracion:"—",modalidad:"Presencial",precio:75000,descripcion:"Plan adaptado para patologías metabólicas. Coordinación con médico tratante si aplica.",imagen:"img/metabolica.svg"},
-  {id:"PL005",tipo:"Plan especializado",nombre:"Plan alimentación vegetariana/vegana",duracion:"—",modalidad:"Presencial",precio:68000,descripcion:"Diseñado para garantizar aporte adecuado de proteínas, hierro, vitamina B12 y calcio sin productos animales.",imagen:"img/vegana.svg"},
-  {id:"PL006",tipo:"Plan especializado",nombre:"Plan alimentación infantil (2-12 años)",duracion:"—",modalidad:"Presencial",precio:65000,descripcion:"Evaluación nutricional pediátrica y diseño de plan adaptado a la etapa de desarrollo del niño.",imagen:"img/infantil.svg"},
-  {id:"EV001",tipo:"Evaluación",nombre:"Antropometría completa",duracion:"20 min",modalidad:"Presencial",precio:18000,descripcion:"Peso, talla, IMC, circunferencia de cintura, cadera, brazo y % de grasa corporal con bioimpedanciometría.",imagen:"img/antropometria.svg"},
-  {id:"EV002",tipo:"Evaluación",nombre:"Bioimpedanciometría",duracion:"15 min",modalidad:"Presencial",precio:12000,descripcion:"Medición de composición corporal: masa grasa, masa muscular, agua corporal y edad metabólica.",imagen:"img/bioimpedancia.svg"},
-  {id:"EV003",tipo:"Evaluación",nombre:"Encuesta de hábitos alimentarios",duracion:"20 min",modalidad:"Presencial",precio:10000,descripcion:"Análisis del patrón alimentario actual. Identificación de déficit y excesos nutricionales.",imagen:"img/habitos.svg"},
-  {id:"EV004",tipo:"Evaluación",nombre:"Análisis de exámenes de laboratorio",duracion:"20 min",modalidad:"Presencial",precio:15000,descripcion:"Interpretación de hemograma, perfil bioquímico y lipídico en contexto nutricional.",imagen:"img/examenes.svg"},
-  {id:"TG001",tipo:"Taller grupal",nombre:"Taller de alimentación saludable",duracion:"90 min",modalidad:"Presencial (grupo)",precio:15000,descripcion:"Máx. 10 personas. Conceptos básicos de alimentación equilibrada y lectura de etiquetas.",imagen:"img/taller.svg"},
-  {id:"TG002",tipo:"Taller grupal",nombre:"Taller de cocina nutritiva",duracion:"120 min",modalidad:"Presencial (grupo)",precio:20000,descripcion:"Preparación de recetas saludables. Incluye degustación. Máx. 8 personas.",imagen:"img/cocina.svg"},
-  {id:"TG003",tipo:"Taller grupal",nombre:"Taller nutrición para deportistas",duracion:"90 min",modalidad:"Presencial (grupo)",precio:18000,descripcion:"Hidratación, nutrición pre y post entrenamiento, suplementación básica. Máx. 12 personas.",imagen:"img/deporte-taller.svg"}
+  {id:"CN001",tipo:"Consulta",nombre:"Primera consulta nutricional",duracion:"50 min",modalidad:"Presencial",precio:35000,descripcion:"Evaluación inicial: anamnesis, antropometría completa y diseño del primer plan alimenticio.",imagen:"../img/primera consulta.jpg"},
+  {id:"CN002",tipo:"Consulta",nombre:"Control nutricional (seguimiento)",duracion:"30 min",modalidad:"Presencial",precio:25000,descripcion:"Seguimiento mensual: medición de indicadores y ajuste del plan vigente.",imagen:"../img/seguimiento mensual.jpg"},
+  {id:"CN003",tipo:"Consulta",nombre:"Control nutricional quincenal",duracion:"30 min",modalidad:"Presencial",precio:22000,descripcion:"Seguimiento intensivo cada 15 días. Recomendado en los primeros 2 meses.",imagen:"../img/seguimiento quincenal.jpg"},
+  {id:"CN004",tipo:"Consulta",nombre:"Teleconsulta nutricional",duracion:"30 min",modalidad:"Online (video)",precio:20000,descripcion:"Consulta de seguimiento vía videollamada. Requiere contar con consulta presencial previa.",imagen:"../img/teleconsulta.jpg"},
+  {id:"CN005",tipo:"Consulta",nombre:"Consulta de urgencia / reagendada",duracion:"30 min",modalidad:"Presencial",precio:28000,descripcion:"Para pacientes que requieren atención fuera de su control habitual.",imagen:"../img/consulta urgencia.jpg"},
+  {id:"PL001",tipo:"Plan especializado",nombre:"Plan pérdida de peso (1 mes)",duracion:"—",modalidad:"Presencial",precio:65000,descripcion:"Incluye primera consulta + 1 control quincenal + plan alimenticio personalizado + seguimiento por WhatsApp.",imagen:"../img/perdida peso 1 mes.jpg"},
+  {id:"PL002",tipo:"Plan especializado",nombre:"Plan pérdida de peso (3 meses)",duracion:"—",modalidad:"Presencial",precio:170000,descripcion:"Incluye primera consulta + 5 controles + 3 planes mensuales + seguimiento continuo.",imagen:"../img/perdida 3 meses.jpg"},
+  {id:"PL003",tipo:"Plan especializado",nombre:"Plan nutrición deportiva (1 mes)",duracion:"—",modalidad:"Presencial",precio:70000,descripcion:"Para deportistas y personas con actividad física frecuente. Cálculo de requerimientos energéticos y proteicos.",imagen:"../img/nutri deporte 1 mes.jpg"},
+  {id:"PL004",tipo:"Plan especializado",nombre:"Plan control diabetes / hipertensión",duracion:"—",modalidad:"Presencial",precio:75000,descripcion:"Plan adaptado para patologías metabólicas. Coordinación con médico tratante si aplica.",imagen:"../img/diabetes.jpg"},
+  {id:"PL005",tipo:"Plan especializado",nombre:"Plan alimentación vegetariana/vegana",duracion:"—",modalidad:"Presencial",precio:68000,descripcion:"Diseñado para garantizar aporte adecuado de proteínas, hierro, vitamina B12 y calcio sin productos animales.",imagen:"../img/plan vegano.png"},
+  {id:"PL006",tipo:"Plan especializado",nombre:"Plan alimentación infantil (2-12 años)",duracion:"—",modalidad:"Presencial",precio:65000,descripcion:"Evaluación nutricional pediátrica y diseño de plan adaptado a la etapa de desarrollo del niño.",imagen:"../img/infantil.jpg"},
+  {id:"EV001",tipo:"Evaluación",nombre:"Antropometría completa",duracion:"20 min",modalidad:"Presencial",precio:18000,descripcion:"Peso, talla, IMC, circunferencia de cintura, cadera, brazo y % de grasa corporal con bioimpedanciometría.",imagen:"../img/antropometria.jpg"},
+  {id:"EV002",tipo:"Evaluación",nombre:"Bioimpedanciometría",duracion:"15 min",modalidad:"Presencial",precio:12000,descripcion:"Medición de composición corporal: masa grasa, masa muscular, agua corporal y edad metabólica.",imagen:"../img/Bioimpedanciometría .jpg"},
+  {id:"EV003",tipo:"Evaluación",nombre:"Encuesta de hábitos alimentarios",duracion:"20 min",modalidad:"Presencial",precio:10000,descripcion:"Análisis del patrón alimentario actual. Identificación de déficit y excesos nutricionales.",imagen:"../img/encuesta.jpg"},
+  {id:"EV004",tipo:"Evaluación",nombre:"Análisis de exámenes de laboratorio",duracion:"20 min",modalidad:"Presencial",precio:15000,descripcion:"Interpretación de hemograma, perfil bioquímico y lipídico en contexto nutricional.",imagen:"../img/examenes.jpg"},
+  {id:"TG001",tipo:"Taller grupal",nombre:"Taller de alimentación saludable",duracion:"90 min",modalidad:"Presencial (grupo)",precio:15000,descripcion:"Máx. 10 personas. Conceptos básicos de alimentación equilibrada y lectura de etiquetas.",imagen:"../img/taller saludable.jpg"},
+  {id:"TG002",tipo:"Taller grupal",nombre:"Taller de cocina nutritiva",duracion:"120 min",modalidad:"Presencial (grupo)",precio:20000,descripcion:"Preparación de recetas saludables. Incluye degustación. Máx. 8 personas.",imagen:"../img/taller cocina.jpg"},
+  {id:"TG003",tipo:"Taller grupal",nombre:"Taller nutrición para deportistas",duracion:"90 min",modalidad:"Presencial (grupo)",precio:18000,descripcion:"Hidratación, nutrición pre y post entrenamiento, suplementación básica. Máx. 12 personas.",imagen:"../img/taller deportivo.jpg"}
 ];
 
 const regiones = {
@@ -40,8 +40,8 @@ const regiones = {
 };
 
 const publicaciones = [
-  {id:1,titulo:"Hábitos simples para mejorar tu alimentación",imagen:"img/blog1.svg",resumen:"Pequeños cambios sostenibles pueden ayudarte a construir una rutina de alimentación más equilibrada.",detalle:"Organizar tus comidas, mantener horarios regulares y aumentar la variedad de alimentos son estrategias que pueden facilitar una alimentación equilibrada. En NutriVida recomendamos trabajar objetivos realistas y adaptados a cada persona."},
-  {id:2,titulo:"¿Qué es la bioimpedanciometría?",imagen:"img/blog2.svg",resumen:"Conoce para qué sirve esta evaluación y cómo complementa el seguimiento nutricional.",detalle:"La bioimpedanciometría permite estimar distintos componentes de la composición corporal. En una evaluación nutricional se utiliza como una herramienta complementaria, junto con antecedentes, mediciones y objetivos personales."}
+  {id:1,titulo:"Hábitos simples para mejorar tu alimentación",imagen:"../img/habitos.jpg",resumen:"Pequeños cambios sostenibles pueden ayudarte a construir una rutina de alimentación más equilibrada.",detalle:"Organizar tus comidas, mantener horarios regulares y aumentar la variedad de alimentos son estrategias que pueden facilitar una alimentación equilibrada. En NutriVida recomendamos trabajar objetivos realistas y adaptados a cada persona."},
+  {id:2,titulo:"¿Qué es la bioimpedanciometría?",imagen:"../img/pregunta.jpg",resumen:"Conoce para qué sirve esta evaluación y cómo complementa el seguimiento nutricional.",detalle:"La bioimpedanciometría permite estimar distintos componentes de la composición corporal. En una evaluación nutricional se utiliza como una herramienta complementaria, junto con antecedentes, mediciones y objetivos personales."}
 ];
 
 function dinero(valor){ return "$" + Number(valor).toLocaleString("es-CL") + " CLP"; }
@@ -54,7 +54,7 @@ function configurarMenu(){
   const usuario=JSON.parse(localStorage.getItem("usuarioSesion")||"null");
   const area=document.getElementById("areaSesion");
   if(area){
-    if(usuario) area.innerHTML=`<a class="btn btn-outline" href="${usuario.rol==="Administrador"?"admin/inicio.html":"inicio.html"}">Hola, ${usuario.nombre}</a>`;
+    if(usuario) area.innerHTML=`<a class="btn btn-outline" href="${usuario.rol==="Administrador"?"../admin/inicio.html":"../inicio.html"}">Hola, ${usuario.nombre}</a>`;
   }
 }
 document.addEventListener("DOMContentLoaded",configurarMenu);
@@ -181,8 +181,8 @@ function validarLogin(e){
   const u=usuarios.find(x=>x.correo.toLowerCase()===correo.toLowerCase()&&x.clave===clave&&x.activo!==false);
   if(!u){setError("errorGeneral","Correo o contraseña incorrectos.");return;}
   localStorage.setItem("usuarioSesion",JSON.stringify(u));
-  if(u.rol==="Administrador"||u.rol==="Nutricionista")window.location.href="admin/inicio.html";
-  else window.location.href="inicio.html";
+  if(u.rol==="Administrador"||u.rol==="Nutricionista")window.location.href="../admin/inicio.html";
+  else window.location.href="../inicio.html";
 }
 
 function validarContacto(e){
@@ -258,11 +258,11 @@ function soloAdministrador(){
   const u=protegerAdmin();
   if(u && u.rol!=="Administrador"){
     alert("Esta sección requiere rol Administrador.");
-    window.location.href="inicio.html";
+    window.location.href="../inicio.html";
     return null;
   }return u;
 }
-function cerrarSesion(){localStorage.removeItem("usuarioSesion");window.location.href="login.html";}
+function cerrarSesion(){localStorage.removeItem("usuarioSesion");window.location.href="../js/login.html";}
 
 /*Admin - servicios*/
 function renderAdminServicios(){
