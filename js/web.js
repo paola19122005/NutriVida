@@ -250,7 +250,7 @@ inicializarUsuarios();
 function protegerAdmin(){
   const u=JSON.parse(localStorage.getItem("usuarioSesion")||"null");
   if(!u || (u.rol!=="Administrador" && u.rol!=="Nutricionista")){
-    window.location.href="../login.html";return null;
+    window.location.href="login.html";return null;
   }
   return u;
 }
@@ -262,7 +262,7 @@ function soloAdministrador(){
     return null;
   }return u;
 }
-function cerrarSesion(){localStorage.removeItem("usuarioSesion");window.location.href="../login.html";}
+function cerrarSesion(){localStorage.removeItem("usuarioSesion");window.location.href="login.html";}
 
 /*Admin - servicios*/
 function renderAdminServicios(){
