@@ -181,8 +181,8 @@ function validarLogin(e){
   const u=usuarios.find(x=>x.correo.toLowerCase()===correo.toLowerCase()&&x.clave===clave&&x.activo!==false);
   if(!u){setError("errorGeneral","Correo o contraseña incorrectos.");return;}
   localStorage.setItem("usuarioSesion",JSON.stringify(u));
-  if(u.rol==="Administrador"||u.rol==="Nutricionista")window.location.href="admin/index.html";
-  else window.location.href="index.html";
+  if(u.rol==="Administrador"||u.rol==="Nutricionista")window.location.href="admin/inicio.html";
+  else window.location.href="inicio.html";
 }
 
 function validarContacto(e){
@@ -258,7 +258,7 @@ function soloAdministrador(){
   const u=protegerAdmin();
   if(u && u.rol!=="Administrador"){
     alert("Esta sección requiere rol Administrador.");
-    window.location.href="index.html";
+    window.location.href="inicio.html";
     return null;
   }return u;
 }
@@ -274,7 +274,7 @@ function guardarProductoAdmin(e){
   e.preventDefault();const f=e.target;
   const obj={id:f.idProducto.value.trim(),tipo:f.tipo.value,nombre:f.nombre.value.trim(),duracion:f.duracion.value.trim(),modalidad:f.modalidad.value.trim(),precio:Number(f.precio.value),descripcion:f.descripcion.value.trim(),imagen:f.imagen.value.trim()||"img/consulta.svg"};
   if(!obj.id||!obj.nombre||obj.precio<0||!obj.descripcion){alert("Completa los campos obligatorios.");return}
-  const idx=productos.findIndex(p=>p.id===obj.id);
+  const idx=productos.findinicio(p=>p.id===obj.id);
   if(idx>=0)productos[idx]=obj;else productos.push(obj);
   localStorage.setItem("productosNutriVida",JSON.stringify(productos));f.reset();renderAdminServicios();mostrarToast("Servicio guardado.");
 }
@@ -300,7 +300,7 @@ function editarUsuario(id){
   document.getElementById("editId").value=u.id;document.getElementById("editRun").value=u.run;document.getElementById("editNombre").value=u.nombre;document.getElementById("editApellidos").value=u.apellidos;document.getElementById("editCorreo").value=u.correo;document.getElementById("editRol").value=u.rol;window.scrollTo({top:0,behavior:"smooth"});
 }
 function guardarEdicionUsuario(e){
-  e.preventDefault();const f=e.target,usuarios=JSON.parse(localStorage.getItem("usuariosNutriVida")||"[]"),idx=usuarios.findIndex(u=>u.id==f.editId.value);if(idx<0)return;
+  e.preventDefault();const f=e.target,usuarios=JSON.parse(localStorage.getItem("usuariosNutriVida")||"[]"),idx=usuarios.findinicio(u=>u.id==f.editId.value);if(idx<0)return;
   usuarios[idx].run=f.editRun.value.trim();usuarios[idx].nombre=f.editNombre.value.trim();usuarios[idx].apellidos=f.editApellidos.value.trim();usuarios[idx].correo=f.editCorreo.value.trim();usuarios[idx].rol=f.editRol.value;
   localStorage.setItem("usuariosNutriVida",JSON.stringify(usuarios));f.reset();renderUsuarios();mostrarToast("Usuario actualizado.");
 }

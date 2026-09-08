@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class = "site-header">
-        <div class="container">
+        <div class="container navbar">
 
             <a class="logo" href="inicio.html">
                 <img src="img/logo.svg" alt="Logo NutriVida">
@@ -92,16 +92,28 @@
 
         <div id="toast" class="toast"></div>
 
-        <script>document.addEventListener("DOMContentLoaded",()=>{cargarProductos();const c=document.getElementById("listaDestacados");productos.slice(0,4).forEach(p=>c.innerHTML+=`
-            <article class="card">
-                <img class="card-img" src="${p.imagen}" alt="${p.nombre}">
-                <div class="card-body">
-                    <h3>${p.nombre}</h3>
-                    <p class="muted">${p.descripcion}</p
-                    <p class="price">${dinero(p.precio)}</p>
-                    <button class="btn btn-primary" onclick="verDetalle('${p.id}')">Ver detalle</button>
-                </div>
-            </article>`)});
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                cargarProductos();
+
+                const c = document.getElementById("listaDestacados");
+
+                productos.slice(0, 4).forEach(p => {
+                    c.innerHTML += `
+                        <article class="card">
+                            <img class="card-img" src="${p.imagen}" alt="${p.nombre}">
+                            <div class="card-body">
+                                <h3>${p.nombre}</h3>
+                                <p class="muted">${p.descripcion}</p>
+                                <p class="price">${dinero(p.precio)}</p>
+                                <button class="btn btn-primary" onclick="verDetalle('${p.id}')">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </article>
+                    `;
+                });
+            });
         </script>
     </main>
     <footer>
@@ -131,6 +143,6 @@
         </div>
         <div class="footer-bottom">Copyright © Clínica NutriVida.</div>
     </footer>
-<script src="js/app.js"></script>
+<script src="js/web.js"></script>
 </body>
 </html>
