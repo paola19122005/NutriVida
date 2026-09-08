@@ -54,7 +54,7 @@ function configurarMenu(){
   const usuario=JSON.parse(localStorage.getItem("usuarioSesion")||"null");
   const area=document.getElementById("areaSesion");
   if(area){
-    if(usuario) area.innerHTML=`<a class="btn btn-outline" href="${usuario.rol==="Administrador"?"admin/index.html":"index.html"}">Hola, ${usuario.nombre}</a>`;
+    if(usuario) area.innerHTML=`<a class="btn btn-outline" href="${usuario.rol==="Administrador"?"admin/inicio.html":"inicio.html"}">Hola, ${usuario.nombre}</a>`;
   }
 }
 document.addEventListener("DOMContentLoaded",configurarMenu);
