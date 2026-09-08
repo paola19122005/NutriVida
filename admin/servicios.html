@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica NutriVida - asesoría nutricional personalizada">
+    <title>Mantenedor de Servicios</title>
+</head>
+<body>
+    <header class="site-header admin-header">
+        <div class="container navbar">
+            <a class="logo" href="../index.html">
+                <img src="../img/logo.svg" alt="Logo NutriVida">
+                <span>Clínica NutriVida
+                    <small>Salud integral</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"></button>
+
+            <nav aria-label="Navegación principal">
+                <ul class="nav-links admin-nav" id="navLinks">
+                    <li><a href="index.html">Panel</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="usuarios.html">Usuarios</a></li>
+                    <li><button class="btn btn-danger" onclick="cerrarSesion()">Cerrar sesión</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="page-title">
+            <div class="container">
+                <h1>Mantenedor de Servicios</h1>
+                <p>Los cambios se guardan en LocalStorage.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <form id="formServicio">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="idProducto">Código</label>
+                            <input id="idProducto" name="idProducto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo">Tipo</label>
+                            <select id="tipo" name="tipo">
+                                <option>Consulta</option>
+                                <option>Plan especializado</option>
+                                <option>Evaluación</option>
+                                <option>Taller grupal</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duracion">Duración</label>
+                            <input id="duracion" name="duracion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modalidad">Modalidad</label>
+                            <input id="modalidad" name="modalidad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="precio">Precio CLP</label>
+                            <input id="precio" name="precio" type="number" min="0" required>
+                        </div>
+                        <div class="form-group full">
+                            <label for="imagen">Ruta de imagen</label>
+                            <input id="imagen" name="imagen" placeholder="img/consulta.svg">
+                        </div>
+                        <div class="form-group full">
+                            <label for="descripcion">Descripción</label>
+                            <textarea id="descripcion" name="descripcion" required></textarea>
+                        </div>
+                        <div class="full">
+                            <button class="btn btn-primary" type="submit">Guardar servicio</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="container">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Precio</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyServicios"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <div id="toast" class="toast"></div>
+    </main>
+    
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <strong>Clínica NutriVida</strong>
+                <p class="muted">Asesoría nutricional personalizada para tu bienestar integral.</p>
+            </div>
+            <div>
+                <strong>Contacto</strong>
+                <p class="muted">
+                    Av. Vitacura 2900, Las Condes
+                    <br>
+                    +56 9 1234 5678
+                    <br>
+                    contacto@nutrivida.cl
+                </p>
+                /div>
+            <div>
+                <strong>Horario</strong>
+                <p class="muted">
+                    Lun a Vie: 09:00 - 18:00
+                    <br>
+                    Sáb: 09:00 - 14:00
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">Copyright © Clínica NutriVida.</div>
+    </footer>
+<script src="../js/app.js"></script></body></html>
